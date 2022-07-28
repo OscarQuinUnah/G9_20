@@ -36,7 +36,7 @@
             break;
 
             case "UpdatePago":
-                $datos=$pago->update_pago($body["Fecha_de_Pago"],$body["Monto_de_Pago"],$body["Tipo_de_Pago"],$body["Numero_de_Pedido"],$body["Empresa"],$body["Numero_de_Pago"]);
+                $datos=$pago->update_pago($body["Numero_de_Pago"],$body["Fecha_de_Pago"],$body["Monto_de_Pago"],$body["Tipo_de_Pago"],$body["Numero_de_Pedido"],$body["Empresa"]);
                 echo json_encode("Pago Modificado Exitosamente");
             break;
 
