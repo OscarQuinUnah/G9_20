@@ -40,7 +40,7 @@
         public function update_pago($Numero_de_Pago, $Fecha_de_Pago, $Monto_de_Pago, $Tipo_de_Pago, $Numero_de_Pedido, $Empresa){
             $conectar= parent::conexion();
             parent::set_names();
-            $sql="UPDATE pago SET Numero_de_Pago=?, Fecha_de_Pago=?, Monto_de_Pago=?, Tipo_de_Pago=?, Numero_de_Pedido=?, Empresa=? WHERE Numero_de_Pago=$Numero_de_Pago;";
+            $sql="UPDATE pago SET Fecha_de_Pago=?, Monto_de_Pago=?, Tipo_de_Pago=?, Numero_de_Pedido=?, Empresa=? WHERE Numero_de_Pago= ?;";
             $sql=$conectar->prepare($sql);
             $sql->bindValue(1, $Numero_de_Pago);
             $sql->bindValue(2, $Fecha_de_Pago);
